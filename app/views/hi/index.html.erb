@@ -1,0 +1,15 @@
+<html>
+<head><title>Hi <%= @stud %>!</title></head>
+<body>
+<h1>Hello, <%= @stud %>!</h1>
+<p><%= @date %></p>   
+<p>Це повідомлення прибуло з
+app/views/hi/index.html.erb</p>
+<p><%= @message %></p>
+<% 5.times do |i|%>
+<p><%= @message.insert(17, i.to_s + ' ') %></p>
+<%@message.slice!(17)%>
+<%@message.slice!(18)%>
+<% end %>
+</body>
+</html>
