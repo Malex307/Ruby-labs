@@ -57,6 +57,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy_all
+    User.destroy_all
+
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: "Users was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

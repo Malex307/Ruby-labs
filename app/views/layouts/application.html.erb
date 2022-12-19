@@ -8,9 +8,20 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+        }
+    </style>
   </head>
-
+  <header> <%= render 'layouts/header' %></header>
   <body>
     <%= yield %>
   </body>
+  <footer class="footer">
+    <%= render 'layouts/footer' %>
+  </footer>
 </html>
